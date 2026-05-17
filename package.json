@@ -12,5 +12,8 @@
   "type": "module",
   "dependencies": {
     "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.15"
   }
 }
