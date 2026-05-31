@@ -8,7 +8,17 @@ class Product extends Model {
                 name: Sequelize.STRING,
                 price: Sequelize.INTEGER,
                 category: Sequelize.STRING,
-                path: Sequelize.STRING
+                path: Sequelize.STRING,
+                url: {
+                    type: Sequelize.VIRTUAL,
+                    get() {
+                        const baseUrl = process.env.APP_URL;     
+                        const fileRoute = '/product-file';         
+                        const filename = this.path;                
+                    
+                        return `${baseUrl}${fileRoute}/${filename}`;
+                    }
+                }
             },
             {
                 sequelize,

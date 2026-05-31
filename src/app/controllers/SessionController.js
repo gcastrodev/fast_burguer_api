@@ -22,7 +22,7 @@ class SessionController {
 
 
         if(!isValid){
-            dataValidation();
+            return dataValidation();
         }
 
         const { email, password } = request.body;
@@ -33,14 +33,14 @@ class SessionController {
             }
         })
         if(!existingUser){
-            dataValidation();
+            return dataValidation();
         }
 
         const isPasswordCorrect = await bcrypt.compare(password, 
             existingUser.password_hash)
 
             if(!isPasswordCorrect){
-                dataValidation();
+                return dataValidation();
             }
 
 
