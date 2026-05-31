@@ -8,6 +8,10 @@ node_modules/
 !.env.example
 
 
+# Uploads
+uploads/
+
+
 # Logs
 logs/
 *.log
