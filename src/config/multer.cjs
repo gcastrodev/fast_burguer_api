@@ -1,6 +1,6 @@
-const multer = require("multer");
+const multer = require('multer');
 const { resolve } = require('node:path');
-const { v4 } = require("uuid");
+const { v4 } = require('uuid');
 
 
 module.exports = {

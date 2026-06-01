@@ -1,7 +1,7 @@
-import { v4 } from "uuid";
-import User from "../models/User.js";
-import * as Yup from "yup";
-import bcrypt from "bcrypt";
+import { v4 } from 'uuid';
+import User from '../models/User.js';
+import * as Yup from 'yup';
+import bcrypt from 'bcrypt';
 
 
 class UserController {

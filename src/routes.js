@@ -1,9 +1,9 @@
-import { Router } from "express";
-import UserController from "./app/controllers/UserController.js";
-import SessionController from "./app/controllers/SessionController.js";
-import ProductController from "./app/controllers/ProductController.js";
-import multer from "multer";
-import multerConfig from "./config/multer.cjs";
+import { Router } from 'express';
+import UserController from './app/controllers/UserController.js';
+import SessionController from './app/controllers/SessionController.js';
+import ProductController from './app/controllers/ProductController.js';
+import multer from 'multer';
+import multerConfig from './config/multer.cjs';
 
 
 const routes = new Router();
