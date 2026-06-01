@@ -30,7 +30,7 @@ class UserController {
             }
         })
         if(existingUser){
-            return response.status(400).json({ message: 'E-mail is already in use!' })
+            return response.status(400).json({ error: 'E-mail is already in use!' })
         }
 
 
