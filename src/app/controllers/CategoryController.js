@@ -17,11 +17,12 @@ class CategoryController {
 
 
         const { name } = request.body;
+        const { filename } = request.file;
 
         const existingCategory = await Category.findOne({
             where: {
-                name
-            }
+                name,
+            },
         })
 
         if (existingCategory){
@@ -29,7 +30,8 @@ class CategoryController {
         }
         
         const newCategory = await Category.create({
-            name
+            name,
+            path: filename,
         })
 
         

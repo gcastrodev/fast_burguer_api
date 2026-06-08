@@ -23,7 +23,7 @@ routes.put('/products/:id', adminMiddleware, upload.single('file'), ProductContr
 
 routes.get('/products', ProductController.index);
 
-routes.post('/categories', adminMiddleware, CategoryController.store);
+routes.post('/categories', adminMiddleware, upload.single('file'), CategoryController.store);
 routes.get('/categories', CategoryController.index);
 
 export default routes;
