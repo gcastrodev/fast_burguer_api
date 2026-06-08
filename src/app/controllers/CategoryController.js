@@ -1,5 +1,6 @@
 import * as Yup from 'yup';
 import Category from '../models/Category.js';
+import { Op } from 'sequelize';
 
 
 class CategoryController {
@@ -65,6 +66,9 @@ class CategoryController {
         const existingCategory = await Category.findOne({
             where: {
                 name,
+                id: {
+                    [Op.ne]: id,
+                },
             },
         })
 
@@ -83,7 +87,9 @@ class CategoryController {
         },
     );
 
-        return response.status(201).json();
+        const category = await Category.findByPk(id);
+
+        return response.status(200).json(category);
     }
 
     async index(_request, response){

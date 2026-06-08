@@ -50,7 +50,7 @@ routes.put(
     '/categories/:id', 
     adminMiddleware, 
     upload.single('file'), 
-    CategoryController.store);
+    CategoryController.update);
 
 routes.get(
     '/categories', 
